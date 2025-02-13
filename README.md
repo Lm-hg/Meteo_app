@@ -22,7 +22,6 @@
 
 6. Lancez l'application :
     ```bash
-    cd app
     python app.py
     ```
 
