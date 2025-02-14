@@ -103,6 +103,62 @@ button a {
 button:hover {
     background: #1e7e34;
 }
+/* Effet d'introduction */
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+#bouquet-container {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    text-align: center;
+}
+
+#bouquet-container img {
+    width: 200px;
+    height: auto;
+}
+
+#valentine-message{
+    color: rgb(243, 0, 0);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+#valentine-messageSuite{
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 600px) {

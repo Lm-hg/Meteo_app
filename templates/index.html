@@ -55,6 +55,35 @@
           </li>
       {% endfor %}
   </ul>
+  <div id="intro">
+    <div id="bouquet-container">
+      <p id="valentine-message">Joyeuse Saint-Valentin !</p>
+        <img src="{{ url_for('static', filename='icons/fleur.png') }}" alt="Bouquet de fleurs">
+      <p id="valentine-messageSuite">A ceux qui sont en couple</p>
 
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+            document.getElementById("bouquet-container").classList.add("show");
+        }, 1000);
+
+        setTimeout(() => {
+            document.getElementById("valentine-message").classList.add("show");
+        }, 2000);
+        setTimeout(() => {
+            document.getElementById("valentine-messageSuite").classList.add("show");
+        }, 2000);
+        setTimeout(() => {
+            document.getElementById("intro").classList.add("fade-out");
+        }, 4000);
+
+        setTimeout(() => {
+            document.getElementById("intro").style.display = "none";
+        }, 5000);
+    });
+  </script>
 </body>
 </html>
